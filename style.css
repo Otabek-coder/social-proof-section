@@ -59,12 +59,13 @@ body {
 }
 .cards {
   display: flex;
-  justify-content: space-between;
+  width:100%;
+/*   justify-content: space-between; */
 }
 .profile-card {
   background-color: hsl(300, 43%, 22%);
   color: hsl(0, 0%, 100%);
-  /* max-width: 21em;  */
+  max-width: 21em; 
   border-radius: 8px;
   padding: 35px;
   font-size: 15px;
@@ -158,6 +159,7 @@ body {
     flex-direction: column;
   }
   .profile-card {
+    max-width: 100%;
     margin: 0;
   }
 }
