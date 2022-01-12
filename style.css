@@ -163,3 +163,51 @@ body {
     margin: 0;
   }
 }
+@media (max-width: 26.563em) {
+  .container {
+    padding: 10px;
+  }
+  .showcase {
+    flex-direction: column;
+  }
+  .intro-text {
+    text-align: center;
+  }
+  .intro-text h1 {
+    width: auto;
+  }
+  .showcase .star-icon {
+    flex-direction: column;
+    margin: 10px 0;
+    padding: 15px 0px;
+  }
+  .rating {
+    margin: 0;
+  }
+
+  .star-icon div {
+    margin: 0 auto;
+  }
+  .cards {
+    flex-direction: column;
+  }
+  .profile-card {
+    margin: 0;
+    max-width: 100%;
+  }
+}
+@media (max-width: 64em) {
+  
+  .showcase {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 90em) {
+  body {
+    background-position: right 45vw bottom 65vh, left 20vw top 0vh;
+  }
+  .showcase {
+    margin-bottom: 10px;
+  }
+}
+
