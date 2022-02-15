@@ -6,8 +6,9 @@ body {
   margin: 0;
   background-image: url(/images/bg-pattern-top-desktop.svg),
     url(/images/bg-pattern-bottom-desktop.svg);
-  background-position: right 58vw bottom 73vh, left 20vw top 48vh;
+   background-position: top left, bottom right;
   background-repeat: no-repeat;
+  background-size: max(50%, 400px);
   font-family: "Spartan", sans-serif;
   min-height: 100vh;
   display: flex;
@@ -16,15 +17,16 @@ body {
 }
 
 .container {
-  margin: 0 10px;
-  max-width: 1020px;
+  max-width: 1200px;
+  width: 95%;
 }
 .showcase {
   display: flex;
-  margin-bottom: 50px;
+  margin-bottom: 2.5em;
 }
 .intro-text {
-  max-width: 500px;
+  max-width: 30rem;
+  margin-right: 2em;
 }
 .intro-text h1 {
   margin: 0;
@@ -50,25 +52,27 @@ body {
   font-weight: 700;
   color: hsl(300, 43%, 22%);
 }
-.star-icon {
+.star-icon-container {
   background-color: hsl(300, 24%, 96%);
-  padding: 15px 80px 15px 30px;
+  padding: .938em 5em .938em  1.875em ;
   display: flex;
   border-radius: 8px;
   margin-bottom: 15px;
 }
-.cards {
+.cards-container {
   display: flex;
   width:100%;
-/*   justify-content: space-between; */
+  justify-content: space-between;
 }
 .profile-card {
   background-color: hsl(300, 43%, 22%);
-  color: hsl(0, 0%, 100%);
-  max-width: 21em; 
+  color: hsl(300, 24%, 96%);
+  max-width: 30em; 
   border-radius: 8px;
-  padding: 35px;
-  font-size: 15px;
+  width: 100%;
+  line-height: 1.5;
+  padding: 2em;
+  font-size: 14px;
   font-weight: 400;
   margin-right: 30px;
 }
@@ -90,20 +94,23 @@ body {
   margin: auto 0;
 }
 
-.star-icon:first-of-type {
+.star-icon-container:first-of-type {
   margin-right: 80px;
 }
-.star-icon:nth-of-type(2) {
+.star-icon-container:nth-of-type(2) {
   margin-right: 40px;
 }
-.star-icon:first-of-type {
+.star-icon-container:first-of-type {
   margin-left: -80px;
 }
-.star-icon:nth-of-type(2) {
+.star-icon-container:nth-of-type(2) {
   margin-left: -40px;
 }
 .profile-card:nth-of-type(3) {
   margin-right: 0px;
+}
+.star-icon-container img{
+  margin: 4px ;
 }
 .profile-img {
   height: 50px;
@@ -123,91 +130,45 @@ body {
 .profile-card:last-of-type {
   margin-bottom: -30px;
 }
-@media (max-width: 23.438em) {
-  body {
-    background-image: url(/images/bg-pattern-top-mobile.svg),
-      url(/images/bg-pattern-bottom-mobile.svg);
-      background-repeat: no-repeat;
-      background-position: right 0vw top 0vh, left 0vw bottom 0vh; 
-      
-  }
+
+
+@media (max-width: 48.438em) {
+  
   .container {
     padding: 10px;
-  }
-  .showcase {
-    flex-direction: column;
-  }
-  .intro-text {
-    text-align: center;
-  }
-  .intro-text h1 {
-    width: auto;
-  }
-  .showcase .star-icon {
-    flex-direction: column;
-    margin: 10px 0;
-    padding: 15px 0px;
-  }
-  .rating {
-    margin: 0;
-  }
 
-  .star-icon div {
-    margin: 0 auto;
   }
-  .cards {
-    flex-direction: column;
-  }
-  .profile-card {
-    max-width: 100%;
-    margin: 0;
-  }
-}
-@media (max-width: 26.563em) {
-  .container {
-    padding: 10px;
-  }
-  .showcase {
-    flex-direction: column;
-  }
-  .intro-text {
-    text-align: center;
-  }
-  .intro-text h1 {
-    width: auto;
-  }
-  .showcase .star-icon {
-    flex-direction: column;
-    margin: 10px 0;
-    padding: 15px 0px;
-  }
-  .rating {
-    margin: 0;
-  }
-
-  .star-icon div {
-    margin: 0 auto;
-  }
-  .cards {
-    flex-direction: column;
-  }
-  .profile-card {
-    margin: 0;
-    max-width: 100%;
-  }
-}
-@media (max-width: 64em) {
   
   .showcase {
-    margin-bottom: 20px;
+     flex-direction: column;
+  }
+  .intro-text {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .intro-text h1 {
+    width: auto;
+  }
+  .showcase .star-icon-container {
+    flex-direction: column;
+    margin: 10px 0;
+    padding: 15px 0px;
+  }
+  .rating {
+    margin: 0;
+  }
+
+  .star-icon-container div {
+    margin: 0 auto;
+  }
+  .cards-container {
+    flex-direction: column;
+  }
+  .profile-card {
+    max-width: 100%;
+    margin: 0;
   }
 }
-@media (max-width: 90em) {
-  body {
-    background-position: right 45vw bottom 65vh, left 20vw top 0vh;
-  }
-  .showcase {
-    margin-bottom: 10px;
-  }
-}
+
+
 
